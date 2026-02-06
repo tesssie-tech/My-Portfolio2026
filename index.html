@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><span class="logo-ot">O.T.</span><span class="logo-name">Akuruli</span></div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#developer">Development</a></li>
+            <li><a href="#artist">Artistry</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="headline">
+                    <span class="dev-text">&lt;Frontend Dev /&gt;</span>
+                    <span class="amp">&amp;</span>
+                    <span class="art-text">Visual Artist</span>
+                </h1>
+                <p class="subtitle">Crafting digital experiences with logic and emotion.</p>
+                <a href="resume.pdf" target="_blank" class="cta-button">View My Resume</a>
+            </div>
+            <img src="imgs/Flat.png" alt="Profile" class="hero-image">
+        </div>
+    </header>
+
+    <!-- Skills Marquee -->
+    <div class="skills-marquee">
+        <div class="marquee-track">
+            <!-- Original Set -->
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-react-original colored"></i>
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-figma-plain colored"></i>
+            <!-- Duplicate Set for Seamless Loop -->
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-react-original colored"></i>
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-figma-plain colored"></i>
+        </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="developer">Development</button>
+        <button class="filter-btn" data-filter="artist">Artistry</button>
+    </div>
+
+    <!-- Developer Section -->
+    <section id="developer" class="section dev-section">
+        <div class="container">
+            <h2 class="section-title">Engineering & Design</h2>
+            <p class="section-desc">Building responsive, accessible, and beautiful web applications.</p>
+            
+            <div class="grid project-grid">
+                <div class="card project-card">
+                    <div class="card-image" style="background-image: url('imgs/foodeli.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 300px;"></div>
+                    <div class="card-info">
+                        <h3>Foodeli</h3>
+                        <p>Html5, Css3, Javascript, Figma</p>
+                        <a href="#">View Code &rarr;</a>
+                        <a href="#" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
+                    </div>
+                </div>
+                <div class="card project-card">
+                    <div class="card-image" style="background-image: url('imgs/20252026\ illustrationsg.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 300px;"></div>
+                    <div class="card-info">
+                        <h3>Waymo</h3>
+                        <p>Html5, Css3, Javascript, Figma</p>
+                        <a href="#">View Code &rarr;</a>
+                        <a href="#" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
+                    </div>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Section -->
+    <section id="artist" class="section art-section">
+        <div class="container">
+            <h2 class="section-title">Artistic Expression</h2>
+            <p class="section-desc">Exploring mediums through digital illustration and traditional canvas.</p>
+            
+            <div class="grid art-grid">
+                <div class="art-piece tall">
+                    <img src="imgs/20252026 illustrationsb.png" alt="Oil on Canvas" class="art-img">
+                    <div class="art-overlay">
+                        <span>Socials art</span>
+                        <a href="https://docs.google.com/presentation/d/170T2V3UCBeDwJdAIZJaaZZjcC3HnstsEDlm03J8bp4A/edit?usp=sharing" class="view-art-btn">View Full Art</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="imgs/20252026 illustrations.png" alt="Digital Sketch" class="art-img">
+                    <div class="art-overlay">
+                        <span>My portfolio</span>
+                        <a href="https://docs.google.com/presentation/d/170T2V3UCBeDwJdAIZJaaZZjcC3HnstsEDlm03J8bp4A/edit?" class="view-art-btn">View Full Portfolio</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="imgs/20252026 illustrationsc.png" alt="Charcoal Study" class="art-img">
+                    <div class="art-overlay">
+                        <span>Full illustrations
+                        </span>
+                        <a href="https://www.behance.net/theresaakuruli" class="view-art-btn">View Full Art</a>
+                    </div>
+                </div>
+                <div class="art-piece tall">
+                    <img src="imgs/20252026 illustrationsd.png" alt="Mixed Media" class="art-img">
+                    <div class="art-overlay">
+                        <span>Mixed Media</span>
+                        <a href="#" class="view-art-btn">View Full Art</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="imgs/20252026 illustrationse.png" alt="Vector Art" class="art-img">
+                    <div class="art-overlay">
+                        <span>Graphic Art</span>
+                        <a href="#" class="view-art-btn">View Full Designs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Let's Collaborate</h2>
+            <p>Whether it's a website or a commission, I'd love to hear from you.</p>
+            <div class="social-links">
+                <a href="https://github.com/tesssie-tech"><i class="fab fa-github"></i></a>
+                <a href="https://www.behance.net/theresaakuruli"><i class="fab fa-behance"></i> </a>
+                <a href="www.linkedin.com/in/theresa-akuruli-121472379"><i class="fab fa-linkedin"></i> </a>
+                <a href="#"><i class="fab fa-tiktok"></i> </a>
+            </div>
+            <p class="copyright">&copy; 2025 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="typing.js"></script>
+</body>
+</html>
