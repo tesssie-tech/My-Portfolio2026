@@ -242,3 +242,37 @@ document.addEventListener('DOMContentLoaded', () => {
         mobilePageSize: 2
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cursor = document.querySelector('.custom-cursor');
+    const canUseCustomCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    if (!cursor || !canUseCustomCursor) {
+        return;
+    }
+
+    const baseTransform = 'translate(-50%, -50%) scale(1)';
+    const pressedTransform = 'translate(-50%, -50%) scale(0.85)';
+
+    document.addEventListener('mousemove', event => {
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+        cursor.classList.add('visible');
+    });
+
+    document.addEventListener('mouseleave', () => {
+        cursor.classList.remove('visible');
+    });
+
+    document.addEventListener('mouseenter', () => {
+        cursor.classList.add('visible');
+    });
+
+    document.addEventListener('mousedown', () => {
+        cursor.style.transform = pressedTransform;
+    });
+
+    document.addEventListener('mouseup', () => {
+        cursor.style.transform = baseTransform;
+    });
+});
