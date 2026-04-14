@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23000000'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-weight='bold' font-size='32' text-anchor='middle' fill='%23FF006B'%3EOT%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -25,23 +25,36 @@
             <li><a href="#developer">Development</a></li>
             <li><a href="#artist">Artistry</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="nav-cta-mobile">
+                <a href="#developer" class="header-btn projects-btn" data-filter-target="developer"><span>Projects</span><i class="fa-solid fa-folder-open cta-icon-right"></i></a>
+                <a href="#contact" class="header-btn hire-btn"><span>Hire Me</span><i class="fa-solid fa-envelope cta-icon-right"></i></a>
+            </li>
         </ul>
+        <div class="nav-cta">
+            <a href="#developer" class="header-btn projects-btn" data-filter-target="developer"><span>Projects</span><i class="fa-solid fa-folder-open cta-icon-right"></i></a>
+            <a href="#contact" class="header-btn hire-btn"><span>Hire Me</span><i class="fa-solid fa-envelope cta-icon-right"></i></a>
+        </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
+                <p class="availability-status">Available to work <i class="fa-solid fa-circle availability-live-icon"></i></p>
                 <h1 class="headline">
                     <span class="dev-text">&lt;Frontend Dev /&gt;</span>
                     <span class="amp">&amp;</span>
                     <span class="art-text">Visual Artist</span>
                 </h1>
-                <p class="subtitle">Crafting digital experiences with logic and emotion.</p>
-                <a href="resume.pdf" target="_blank" class="cta-button">View My Resume</a>
+                <p class="subtitle">I design and build responsive websites and visual experiences that blend frontend development with digital artistry.</p>
+                <div class="hero-cta-group">
+                    <a href="resume.pdf" target="_blank" class="cta-button"><span>Download My CV</span><i class="fa-solid fa-download cta-icon-right" aria-hidden="true"></i></a>
+                    <a href="#contact" class="cta-button cta-secondary"><span>Let's Talk</span><i class="fa-solid fa-paper-plane cta-icon-right"></i></a>
+                </div>
             </div>
-            <img src="imgs/Flat.png" alt="Profile" class="hero-image">
         </div>
     </header>
+
+   
 
     <!-- Skills Marquee -->
     <div class="skills-marquee">
@@ -62,7 +75,49 @@
             <i class="devicon-figma-plain colored"></i>
         </div>
     </div>
+ <section id="about" class="section about-section">
+        <div class="container about-content">
+            <div class="about-copy">
+                <span class="about-label">// About me</span>
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-desc">I’m Theresa Akuruli, a frontend developer and visual artist who builds responsive websites with a strong eye for design, detail, and storytelling.</p>
+                <p class="about-text">I combine clean code, thoughtful layouts, and creative visuals to make digital experiences feel polished, modern, and personal.</p>
+            </div>
 
+            <div class="about-details">
+                <div class="about-card about-summary-card">
+                    <div class="about-name-row">
+                        <i class="fa-solid fa-circle-user about-name-icon"></i>
+                    </div>
+
+                    <div class="about-meta-group">
+                        <div class="about-meta-block">
+                             <p class="about-name">Theresa Akuruli</p>
+                            <p>Frontend Developer, UI Designer, and Visual Artist.</p>
+                        </div>
+
+                        <div class="about-meta-block">
+                            <span class="about-label">Education</span>
+                            <p>Diploma in Computer Science</p>
+                        </div>
+
+                        <div class="about-meta-block">
+                            <span class="availability-status about-status-pill">Open to Opportunity<i class="fa-solid fa-circle availability-live-icon about-status-icon"></i></span>
+                        </div>
+                    </div>
+                        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/tesssie-tech"><i class="fab fa-github"></i></a>
+                <a href="https://www.behance.net/theresaakuruli"><i class="fab fa-behance"></i> </a>
+                <a href="www.linkedin.com/in/theresa-akuruli-121472379"><i class="fab fa-linkedin"></i> </a>
+                <a href="#"><i class="fab fa-tiktok"></i> </a>
+                
+            </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
     <!-- Filter Controls -->
     <div class="filter-controls">
         <button class="filter-btn active" data-filter="all">All Work</button>
@@ -78,12 +133,12 @@
             
             <div class="grid project-grid">
                 <div class="card project-card">
-                    <div class="card-image" style="background-image: url('imgs/foodeli.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 300px;"></div>
+                    <div class="card-image" style="background-image: url('imgs/Modraws.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 300px;"></div>
                     <div class="card-info">
-                        <h3>Foodeli</h3>
-                        <p>Html5, Css3, Javascript, Figma</p>
-                        <a href="#">View Code &rarr;</a>
-                        <a href="#" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
+                        <h3>Mo-draws</h3>
+                        <p>Html5, Css3, React.js, Figma</p>
+                        <a href="https://github.com/tesssie-tech">View Code &rarr;</a>
+                        <a href="https://mo-draws.onrender.com" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
                     </div>
                 </div>
                 <div class="card project-card">
@@ -91,11 +146,20 @@
                     <div class="card-info">
                         <h3>Waymo</h3>
                         <p>Html5, Css3, Javascript, Figma</p>
-                        <a href="#">View Code &rarr;</a>
-                        <a href="#" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
+                        <a href="https://github.com/tesssie-tech">View Code &rarr;</a>
+                        <a href="https://waymo-1.onrender.com" target="_blank" class="live-demo-btn">Live Demo &#x2197;</a>
                     </div>
                 </div>
                 <!-- Add more projects here -->
+            </div>
+            <div class="section-pagination" id="dev-pagination">
+                <button type="button" class="page-btn" id="dev-prev">Previous</button>
+                <span class="page-indicator" id="dev-page-indicator">Page 1 of 1</span>
+                <button type="button" class="page-btn" id="dev-next">Next</button>
+            </div>
+            <div class="developer-actions">
+                <a href="https://github.com/tesssie-tech?tab=repositories" target="_blank" rel="noopener noreferrer" class="developer-action-btn">View Repository</a>
+                <a href="https://github.com/tesssie-tech" target="_blank" rel="noopener noreferrer" class="developer-action-btn developer-action-btn-secondary">GitHub Profile</a>
             </div>
         </div>
     </section>
@@ -115,7 +179,7 @@
                     </div>
                 </div>
                 <div class="art-piece">
-                    <img src="imgs/20252026 illustrations.png" alt="Digital Sketch" class="art-img">
+                    <img src="imgs/last post.png" alt="Digital Sketch" class="art-img">
                     <div class="art-overlay">
                         <span>My portfolio</span>
                         <a href="https://docs.google.com/presentation/d/170T2V3UCBeDwJdAIZJaaZZjcC3HnstsEDlm03J8bp4A/edit?" class="view-art-btn">View Full Portfolio</a>
@@ -144,19 +208,25 @@
                     </div>
                 </div>
             </div>
+            <div class="section-pagination" id="art-pagination">
+                <button type="button" class="page-btn" id="art-prev">Previous</button>
+                <span class="page-indicator" id="art-page-indicator">Page 1 of 1</span>
+                <button type="button" class="page-btn" id="art-next">Next</button>
+            </div>
         </div>
     </section>
 
     <footer id="contact">
         <div class="container">
-            <h2>Let's Collaborate</h2>
-            <p>Whether it's a website or a commission, I'd love to hear from you.</p>
             <div class="social-links">
                 <a href="https://github.com/tesssie-tech"><i class="fab fa-github"></i></a>
                 <a href="https://www.behance.net/theresaakuruli"><i class="fab fa-behance"></i> </a>
                 <a href="www.linkedin.com/in/theresa-akuruli-121472379"><i class="fab fa-linkedin"></i> </a>
                 <a href="#"><i class="fab fa-tiktok"></i> </a>
+                
             </div>
+             <h4>Let's Collaborate</h4>
+            
             <p class="copyright">&copy; 2025 Portfolio. All rights reserved.</p>
         </div>
     </footer>
