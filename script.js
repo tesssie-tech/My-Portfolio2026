@@ -97,15 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function handleLinkClick(event) {
         const targetURL = this.getAttribute('href');
         const target = this.getAttribute('target');
-        const isLiveDemo = this.classList.contains('live-demo-btn');
-        const isArtLink = this.classList.contains('view-art-btn');
-        const isAnimatedExternalLink = isLiveDemo || isArtLink;
 
         // Skip animation for:
         // 1. Links opening in new tab (_blank)
         // 2. Anchor links (starting with #) or empty links
         // 3. Special protocols (mailto:, tel:)
-        if ((!isAnimatedExternalLink && target === '_blank') || 
+        if ((target === '_blank') || 
             !targetURL || 
             targetURL.startsWith('#') || 
             targetURL.startsWith('mailto:') || 
@@ -131,11 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // After the animation, navigate to the new page
         setTimeout(function () {
-            if (isAnimatedExternalLink) {
-                window.open(targetURL, '_blank', 'noopener,noreferrer');
-            } else {
-                window.location.href = targetURL;
-            }
+            window.location.href = targetURL;
         }, 800); // Matches the CSS animation duration
     }
 
@@ -143,6 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('a, button');
     links.forEach(link => {
         link.addEventListener('click', handleLinkClick);
+    });
+
+    // Safety cleanup for back-forward cache restores.
+    window.addEventListener('pageshow', () => {
+        document.querySelectorAll('.transition-overlay').forEach(overlay => overlay.remove());
     });
 });
 
