@@ -276,3 +276,39 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.transform = baseTransform;
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const revealTargets = document.querySelectorAll('.filter-controls, .skills-marquee, .section, footer');
+
+    if (revealTargets.length === 0) {
+        return;
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const supportsObserver = 'IntersectionObserver' in window;
+
+    revealTargets.forEach(element => {
+        element.classList.add('reveal-on-scroll');
+    });
+
+    if (prefersReducedMotion || !supportsObserver) {
+        revealTargets.forEach(element => element.classList.add('is-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            entry.target.classList.add('is-visible');
+            observerInstance.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.16,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    revealTargets.forEach(element => observer.observe(element));
+});
